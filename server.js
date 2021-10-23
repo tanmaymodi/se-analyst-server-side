@@ -2,7 +2,6 @@ const PORT = process.env.PORT || 4000;
 var express=require("express");
 var bodyParser=require("body-parser");
 
-
 const mongoose = require('mongoose');
 const connectDB = require('./config/db');
 connectDB();
@@ -16,9 +15,6 @@ app.set('views', __dirname + '/views');
 app.engine('html', engine.mustache);
 app.set('view engine', 'html');
 app.use('/', require('./routes/index'));
-
-
-
 
 app.get('/analysisdata', (req,res) =>{
     console.log("analytic form khul gya hai");
@@ -57,15 +53,13 @@ app.get('/analysisdata', (req,res) =>{
             console.log(mainObj);
             db.close();
             console.log("analysisdata -- ", mainObj);
-    
+
             return res.send({
                 data: mainObj
             });
             
           });
     })
-    
-    
 });
 
 app.get('/analysispage', (req, res) => {
