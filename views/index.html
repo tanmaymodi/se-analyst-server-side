@@ -9,7 +9,54 @@
 </head>
 
 <body>
-    <form action="/"></form>
+    <div>
+        <form action="/sign_up" method="POST">
+            <div id="form-section">
+                <button id="create_form" onclick="showFormmCreationOptions()">Create Form</button>
+            </div>
+        </form>
+    </div>
+
+
+    <script>
+        function showFormmCreationOptions() {
+            section = '<input type="text" placeholder="Enter Form Name" required name="name" id="name">';
+            section += '<input type="number" min="1" max="15" step="1" id="NOF" placeholder="Number of Fields">';
+            section += '<button onclick="make_fields()">Create Field +</button>';
+            section += "<br>";
+            section += '<input type="Submit" value="Submit">';
+            section += "<br>";
+            document.getElementById("form-section").innerHTML = section;
+        }
+
+
+
+        function make_fields() {
+            var n = document.getElementById("NOF").value;
+            var i;
+            if (n < 1) n = 1;
+            var section = "";
+            section = '<input type="text" placeholder="Enter Form Name" required name="name" id="name">';
+            section += '<input type="number" min="1" step="1" id="NOF" placeholder="Number of Fields">';
+            section += '<button onclick="make_fields()">Create Field +</button>';
+            section += "<br>";
+            for (i = 1; i <= n; i++) {
+                section += "<input type='text' placeholder='Enter Field Name' required name='field_name" + i + "'>";
+                section +=
+                    '<select name="field_type' + i +
+                    '" id="form_type"><option value="text">Text</option><option value="number">Number</option></select>';
+                section += "<br>";
+            }
+            section += '<input type="number" name="nof" id="nof" placeholder="Number of Fields" required value="' + n +
+                '">';
+            section += '<input type="Submit" value="Submit">';
+            section += "<br>";
+            document.getElementById("form-section").innerHTML = section;
+        }
+    </script>
+
+
+
 </body>
 
 </html>
