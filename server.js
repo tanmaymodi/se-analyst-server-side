@@ -17,8 +17,211 @@ app.set('views', __dirname + '/views');
 app.engine('html', engine.mustache);
 app.set('view engine', 'html');
 app.use('/', require('./routes/index'));
+app.get('/index.html' ,(req,res)=>{
+    res.render('index.html');
+})
+//create form page code starts here
 
+app.post('/sign_up', async(req,res) =>{
+    console.log(req.body);
+    console.log(req.params);    
+    console.log(req.keys);
+    console.log(res.body);
+    //var name = req.body.name;
+    // d = req.body;
+    // var n = parseInt(req.body.nof);
+    // var newForm = {};
+    // //console.log("herer is the the test form f: " + testFrom);
+    // //console.log(testFrom);
+    // newForm["name"] = name;
+    // var data = [];
+    // if(d.field_name1 != undefined){
+    //     g = {
+    //         title: d.field_name1,
+    //         type: d.field_type1
+    //     };
+    //     data.push(g);
+    // }
+    // if(d.field_name2 != undefined){
+    //     g = {
+    //         title: d.field_name2,
+    //         type: d.field_type2
+    //     };
+    //     data.push(g);
+    // }
+    // if(d.field_name3 != undefined){
+    //     g = {
+    //         title: d.field_name3,
+    //         type: d.field_type3
+    //     };
+    //     data.push(g);
+    // }
+    // if(d.field_name4 != undefined){
+    //     g = {
+    //         title: d.field_name4,
+    //         type: d.field_type4
+    //     };
+    //     data.push(g);
+    // }
+    // if(d.field_name5 != undefined){
+    //     g = {
+    //         title: d.field_name5,
+    //         type: d.field_type5
+    //     };
+    //     data.push(g);
+    // }
+    // if(d.field_name6 != undefined){
+    //     g = {
+    //         title: d.field_name6,
+    //         type: d.field_type6
+    //     };
+    //     data.push(g);
+    // }
+    // if(d.field_name7 != undefined){
+    //     g = {
+    //         title: d.field_name7,
+    //         type: d.field_type7
+    //     };
+    //     data.push(g);
+    // }
+    // if(d.field_name8 != undefined){
+    //     g = {
+    //         title: d.field_name8,
+    //         type: d.field_type8
+    //     };
+    //     data.push(g);
+    // }
+    // if(d.field_name9 != undefined){
+    //     g = {
+    //         title: d.field_name9,
+    //         type: d.field_type9
+    //     };
+    //     data.push(g);
+    // }
+    // if(d.field_name10 != undefined){
+    //     g = {
+    //         title: d.field_name10,
+    //         type: d.field_type10
+    //     };
+    //     data.push(g);
+    // }
+    // if(d.field_name11 != undefined){
+    //     g = {
+    //         title: d.field_name11,
+    //         type: d.field_type11
+    //     };
+    //     data.push(g);
+    // }
+    // if(d.field_name12 != undefined){
+    //     g = {
+    //         title: d.field_name12,
+    //         type: d.field_type12
+    //     };
+    //     data.push(g);
+    // }
+    // if(d.field_name13 != undefined){
+    //     g = {
+    //         title: d.field_name13,
+    //         type: d.field_type13
+    //     };
+    //     data.push(g);
+    // }
+    // if(d.field_name14 != undefined){
+    //     g = {
+    //         title: d.field_name14,
+    //         type: d.field_type14
+    //     };
+    //     data.push(g);
+    // }
+    // if(d.field_name15 != undefined){
+    //     g = {
+    //         title: d.field_name15,
+    //         type: d.field_type15
+    //     };
+    //     data.push(g);
+    // }
+    
+
+    var resoponses = {
+        name: "Vartika",
+        adhar: 74859685749652,
+        age: 27,
+        gender: "Female",
+        occupation: "Chef",
+        height: 1.6,
+        dental_hygeine: "Hygeine",
+        disea_record: "None",
+        allergies: "None",
+        current_health_status: "Healthy"
+    }
+   //console.log(req.body);
+//    data.forEach(element => {
+//        console.log(element);
+//    });
+//    newForm["fields"]=data;
+//    console.log(newForm);
+
+//    var insertObj = new Form(newForm);
+//    await insertObj.save();
+
+//    db.collection('forms').insertOne(newForm,function(err, collection){
+//    if (err) throw err;
+//       console.log("Record inserted Successfully");
+//    });
+   res.render('success.html');
+})
+
+
+app.get('/',function(req,res){
+   res.set({
+      'Access-control-Allow-Origin': '*'
+   });
+  res.render('index.html');
+})
+
+
+
+//analyis page ccode starts here
 app.get('/analysisdata', async(req,res) =>{
+
+
+
+    for(let j=1;j<10;j++){
+    var Res =  {
+        "surveyType" : "Health Survey",
+        "fields" : {
+            "gender" : "Male",
+            "maritalStatus" : "Married",
+            "city" : "fuf",
+            "district" : "jfil",
+            "state" : "ufui",
+            "Adhaar" : "68",
+            "Name" : "yd",
+            "Age" : "65",
+            "Gender" : "yd",
+            "MaritalStatus" : "hs",
+            "Height" : "97",
+            "Weight" : "67",
+            "Dental Hygiene" : "gs",
+            "Eye Vision" : "hd",
+            "surveyType" : "Health Survey"
+            }
+        }
+    var io = new Form(Res);
+    await io.save();
+    }
+
+
+
+
+
+
+
+
+
+
+
+
     console.log("analytic form khul gya hai");
     var query = { name: "Health Survey"};
     var mainObj = {};
@@ -78,7 +281,10 @@ app.get('/analysisdata', async(req,res) =>{
 });
 
 app.get('/analysispage', (req, res) => {
-    res.render('analysis.html');
+    res.render('analysis.html');    
+});
+app.get('/analysis.html', (req, res) => {
+    res.render('analysis.html');    
 });
 
 var server = require('http').createServer(app);
