@@ -5,9 +5,7 @@ const Person = require('../models/person');
 
 router.route('/')
 .get(async(req, res) => {
-    
-    
-    res.render('index.html');
+    res.render('auth.html');
 });
 
 module.exports = router;

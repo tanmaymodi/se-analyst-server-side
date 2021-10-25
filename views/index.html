@@ -2,65 +2,359 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Census Management System</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/aos/aos.css" type="text/css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" type="text/css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" type="text/css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" type="text/css" rel="stylesheet">
+    <link href="assets/vendor/remixicon/remixicon.css" type="text/css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" type="text/css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" type="text/css" rel="stylesheet">
+
+    <!-- =======================================================
+  * Template Name: OnePage - v4.6.0
+  * Template URL: https://bootstrapmade.com/onepage-multipurpose-bootstrap-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
 </head>
 
 <body>
-    <div>
-        <form action="/sign_up" method="POST">
-            <div id="form-section">
-                <button id="create_form" onclick="showFormmCreationOptions()">Create Form</button>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top">
+        <div class="container d-flex align-items-center justify-content-between">
+
+            <h1 class="logo"><a href="index.html">Census Management System</a></h1>
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+                    <li><a class="nav-link scrollto" href="#about">About</a></li>
+                    <li><a class="nav-link scrollto" href="#services">Services</a></li>
+
+                    <li><a class="nav-link scrollto" href="#team">Team</a></li>
+
+                    <li><a class="getstarted scrollto" href="analysis.html">Analysis Page</a></li>
+                    <li><a class="getstarted scrollto" href="auth.html">Sign out</a></li>
+
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
+
+        </div>
+    </header><!-- End Header -->
+
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="d-flex align-items-center">
+        <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
+            <div class="row justify-content-center">
+                <div class="col-xl-7 col-lg-9 text-center">
+                    <h1>Create and Analyse Survevys</h1>
+
+                </div>
             </div>
-        </form>
-    </div>
+            <div class="text-center">
+                <a href="#about" class="btn-get-started scrollto">Get Started</a>
+            </div>
+
+            <div class="row icon-boxes">
+                <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in"
+                    data-aos-delay="200">
+                    <div class="icon-box">
+                        <div class="icon"><i class="ri-stack-line"></i></div>
+                        <h4 class="title"><a href="">Create Survey Forms</a></h4>
+                        <p class="description"></p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in"
+                    data-aos-delay="300">
+                    <div class="icon-box">
+                        <div class="icon"><i class="ri-palette-line"></i></div>
+                        <h4 class="title"><a href="">Plot Different Graphs</a></h4>
+                        <p class="description"></p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in"
+                    data-aos-delay="400">
+                    <div class="icon-box">
+                        <div class="icon"><i class="ri-command-line"></i></div>
+                        <h4 class="title"><a href="">Save Responses Data</a></h4>
+                        <p class="description"> </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in"
+                    data-aos-delay="500">
+                    <div class="icon-box">
+                        <div class="icon"><i class="ri-fingerprint-line"></i></div>
+                        <h4 class="title"><a href="">Save Analysis</a></h4>
+                        <p class="description">
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section><!-- End Hero -->
+
+    <main id="main">
 
 
+        <!-- ======= About Section ======= -->
+        <section id="about" class="about">
+            <div class="container" data-aos="fade-up">
+
+                <div class="section-title">
+                    <h2>About Us</h2>
+
+                </div>
+
+                <div class="row content">
+                    <div class="col-lg-6">
+                        <p>
+                            Aim:
+                            Software that enables NGOs to operate in network prone villages using digital devices such
+                            as tablets and access the collected digital information.
+                        </p>
+                        <a href="#" class="btn-learn-more">Learn More</a>
+                    </div>
+                    <div class="col-lg-6 pt-4 pt-lg-0">
+                        <p>
+
+                        </p>
+
+                    </div>
+                </div>
+
+            </div>
+        </section><!-- End About Section -->
+
+
+
+
+
+
+
+
+        <!-- ======= Contact Section ======= -->
+        <section id="contact" class="contact">
+            <div class="container" data-aos="fade-up">
+
+                <div class="section-title">
+                    <h2>Create Forms</h2>
+
+                </div>
+
+
+                <br>
+
+                <form action="/sign_up" method="POST">
+                    <div id="form-section">
+
+                        <div class="text-center">
+                            <button style="background: #2487ce;
+                            border: 0;
+                            padding: 10px 30px;
+                            color: #fff;
+                            transition: 0.4s;
+                            border-radius: 4px;" id="create_form" onclick="showFormmCreationOptions()">Crete
+                                Form</button>
+                        </div>
+
+
+
+                </form>
+                <br><br><br>
+
+
+
+            </div>
+        </section><!-- End Contact Section -->
+
+
+
+
+
+
+        <!-- ======= Team Section ======= -->
+        <section id="team" class="team section-bg">
+            <div class="container" data-aos="fade-up">
+
+                <div class="section-title">
+                    <h2>Team</h2>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+                        <div class="member">
+                            <div class="member-img">
+                                <img src="https://media-exp1.licdn.com/dms/image/C4E03AQHDCoAKNgGUkg/profile-displayphoto-shrink_800_800/0/1635020693602?e=1640822400&v=beta&t=O5X_Ofyju3dY4Y3peAsWy9-SBqIfyP520MwtNswbyrY"
+                                    class="img-fluid" alt="">
+
+                            </div>
+                            <div class="member-info">
+                                <h4>Piyush Gupta</h4>
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+                        <div class="member">
+                            <div class="member-img">
+                                <img src="https://media-exp1.licdn.com/dms/image/C4E03AQGe5J8rFJQwNQ/profile-displayphoto-shrink_800_800/0/1627630074149?e=1640822400&v=beta&t=ZV6z4K69DppMGCgfGX0mtuL-D8c0yX0CdvUYoSrj24o"
+                                    class="img-fluid" alt="">
+
+                            </div>
+                            <div class="member-info">
+                                <h4>Janardhan Edara</h4>
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+                        <div class="member">
+                            <div class="member-img">
+                                <img src="https://media-exp1.licdn.com/dms/image/C4D03AQFQO5V2FxSjIw/profile-displayphoto-shrink_800_800/0/1625847634389?e=1640822400&v=beta&t=K3R61rPQKaP1NEEFSyU2XPbk39WY9C95vQrOhrQa84M"
+                                    class="img-fluid" alt="">
+
+                            </div>
+                            <div class="member-info">
+                                <h4>Tanmay Modi</h4>
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
+                        <div class="member">
+                            <div class="member-img">
+                                <img src="https://media-exp1.licdn.com/dms/image/C5103AQGnhtoqmFZfKQ/profile-displayphoto-shrink_400_400/0/1565458839735?e=1640822400&v=beta&t=o9B2V9-y9bohmVkuQRqMyP6Z4eaM4p4n7LB-JJ_q_JE"
+                                    class="img-fluid" alt="">
+
+                            </div>
+                            <div class="member-info">
+                                <h4>Sarthak Gupta</h4>
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section><!-- End Team Section -->
+
+
+    </main>
+
+
+    <div id="preloader"></div>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/purecounter/purecounter.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Templat    e Main JS File -->
+    <script src="assets/js/main.js"></script>
+    <!-- <script src="external.js"></script> -->
     <script>
+        // form page js
         function showFormmCreationOptions() {
-            section = '<input type="text" placeholder="Enter Form Name" required name="name" id="name">';
-            section += '<input type="number" min="1" max="15" step="1" id="NOF" placeholder="Number of Fields">';
-            section += '<button onclick="make_fields()">Create Field +</button>';
-            section += "<br>";
-            section += '<input type="Submit" value="Submit">';
-            section += "<br>";
+            section = '<div class="row">\
+    <div class="col-md-4 form-group"> <input class="form-control" type="text"\
+            placeholder="Enter Form Name" required="" name="name" id="name"> </div>\
+    <div class="col-md-4 form-group"> <input class="form-control" type="number" min="1"\
+            step="1" id="NOF" placeholder="Number of Fields"> </div>\
+    <div class="col-md-2">\
+        <div class="text-center"><button style="background: #2487ce;\
+            border: 0;\
+            padding: 10px 30px;\
+            color: #fff;\
+            transition: 0.4s;\
+            border-radius: 4px;" id="create_form" onclick="make_fields()">Add\
+                Fields</button></div>\
+        <div class="row"> </div>\
+    </div>\
+</div>';
+
             document.getElementById("form-section").innerHTML = section;
         }
 
 
 
         function make_fields() {
+            section = '<div class="row">\
+    <div class="col-md-4 form-group"> <input class="form-control" type="text"\
+            placeholder="Enter Form Name" required="" name="name" id="name"> </div>\
+    <div class="col-md-4 form-group"> <input class="form-control" type="number" min="1"\
+            step="1" id="NOF" placeholder="Number of Fields"> </div>\
+    <div class="col-md-2">\
+        <div class="text-center"><button style="background: #2487ce;\
+            border: 0;\
+            padding: 10px 30px;\
+            color: #fff;\
+            transition: 0.4s;\
+            border-radius: 4px;" id="create_form" onclick="make_fields()">Add\
+                Fields</button></div>\
+        <div class="row"> </div>\
+    </div>\
+</div>';
             var n = document.getElementById("NOF").value;
             var i;
             if (n < 1) n = 1;
-            var section = "";
-
-
-
-
-            section = '<input type="text" placeholder="Enter Form Name" required name="name" id="name">';
-            section += '<input type="number" min="1" step="1" id="NOF" placeholder="Number of Fields">';
-            section += '<button onclick="make_fields()">Create Field +</button>';
-            section += "<br>";
+            if (n > 15) n = 15;
             for (i = 1; i <= n; i++) {
-                section += "<input type='text' placeholder='Enter Field Name' required name='field_name" + i + "'>";
-                section +=
-                    '<select name="field_type' + i +
-                    '" id="form_type"><option value="text">Text</option><option value="number">Number</option></select>';
-                section += "<br>";
+                section += ' <div class="row">\
+        <div class="col-md-4 form-group"> <input type="text" class="form-control"\
+                placeholder="Enter Field Name" required="" name="field_name1"> </div>\
+        <div class="col-md-4 form-group"> <select class="form-control" name="field_type1"\
+                id="form_type">\
+                <option value="text">Text</option>\
+                <option value="number">Number</option>\
+            </select> </div>\
+    </div>';
             }
-            section += '<input type="number" name="nof" id="nof" placeholder="Number of Fields" required value="' + n +
-                '">';
-            section += '<input type="Submit" value="Submit">';
-            section += "<br>";
+            section +=
+                '<div class="text-center">\
+    <button type="Submit" style="background: #2487ce;\ border: 0; padding: 10px 30px; color: #fff; transition: 0.4s; border-radius: 4px;">Create Form</button></div>';
             document.getElementById("form-section").innerHTML = section;
         }
     </script>
-
-
-
 </body>
 
 </html>
