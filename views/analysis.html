@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <canvas id="myChart"></canvas>
+
+    <div id="show">
+        asjcnkjn
+    </div>
+    <form action="/analysis" method="POST">
+        <button></button>
+    </form>
+
+    <script>
+        var temp = {};
+        $("#show").ready(function () {
+            $.ajax({
+                url: '/analysisdata',
+                success: function (res) {
+                    console.log("data --- ", res, '\n', res['data']);
+
+                    var x = $("#show");
+                    var data = res['data'];
+                    for (let i = 0; i < data['name'].length; i++) {
+
+                        x.append(" ");
+                        x.append("<h1>" + data['name'][i] + "<h1>");
+
+
+
+                        //graph code starts here
+                        var ctx = document.getElementById('myChart').getContext('2d');
+                        var myChart = new Chart(ctx, {
+                            type: 'scatter',
+                            data: {
+                                labels: data["weight"],
+                                datasets: [{
+                                    label: '# of Votes',
+                                    data: data["height"],
+                                    backgroundColor: [
+                                        'rgba(255, 99, 132, 0.2)',
+
+                                    ],
+                                    borderColor: [
+                                        'rgba(255, 99, 132, 1)',
+
+                                    ],
+                                    borderWidth: 1
+                                }]
+                            },
+                            options: {
+                                scales: {
+                                    y: {
+                                        beginAtZero: true
+                                    }
+                                }
+                            }
+                        });
+                        //graph code ends here
+
+
+
+
+
+                    }
+
+                }
+            });
+
+        })
+        console.log(temp);
+    </script>
+
+
+
+
+
+</body>
+
+</html>
